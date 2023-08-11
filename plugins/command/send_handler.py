@@ -30,8 +30,6 @@ async def send_with_pic_handler(client: Client, msg: types.Message, key: str, ha
             
         if user.status == 'talent':
             picture = config.pic_talentgirl
-        if user.status == 'owner':
-            picture = config.pic_owner
         if user.status == 'admin':
             if key == hastag[0]:
                 picture = config.pic_admingirl
@@ -41,6 +39,8 @@ async def send_with_pic_handler(client: Client, msg: types.Message, key: str, ha
             picture = config.pic_daddysugar
         if user.status == 'boyfriend rent':
             picture = config.pic_bfrent
+        if user.status == 'girlfriend rent':
+            picture = config.pic_gfrent
         if user.status == 'moans boy':
               if key == hastag[1]:
                 picture = config.pic_moansboy
