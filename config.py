@@ -18,13 +18,13 @@ channel_log = int(os.environ.get("CHANNEL_LOG", "-1001973698894"))
 id_admin = int(os.environ.get("ID_ADMIN", "2033016485"))
 # =========================================================== #
 
-batas_kirim = int(os.environ.get("BATAS_KIRIM", "3"))
-batas_talent = int(os.environ.get("BATAS_TALENT", "3"))
-batas_daddy_sugar = int(os.environ.get("BATAS_DADDY_SUGAR", "3"))
-batas_moansgirl = int(os.environ.get("BATAS_MOANSGIRL", "3"))
-batas_moansboy = int(os.environ.get("BATAS_MOANSBOY", "3"))
-batas_gfrent = int(os.environ.get("BATAS_GFRENT", "3"))
-batas_bfrent = int(os.environ.get("BATAS_BFRENT", "3"))
+batas_kirim = int(os.environ.get("BATAS_KIRIM", "2"))
+batas_talent = int(os.environ.get("BATAS_TALENT", "2"))
+batas_daddy_sugar = int(os.environ.get("BATAS_DADDY_SUGAR", "2"))
+batas_moansgirl = int(os.environ.get("BATAS_MOANSGIRL", "2"))
+batas_moansboy = int(os.environ.get("BATAS_MOANSBOY", "2"))
+batas_gfrent = int(os.environ.get("BATAS_GFRENT", "2"))
+batas_bfrent = int(os.environ.get("BATAS_BFRENT", "2"))
 # =========================================================== #
 
 biaya_kirim = int(os.environ.get("BIAYA_KIRIM", "12"))
