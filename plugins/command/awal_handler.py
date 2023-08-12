@@ -161,7 +161,7 @@ async def help_handler(client, msg):
         pesan += '/ban — ban user\n'
         pesan += '/unban — unban user\n'
 
-    await msg.reply_text(pesan, True, reply_markup=reply_markup)
+    await msg.reply_text(pesan, True,)
 
 async def reply_with_image_text(client: Client, msg: types.Message, text: str, image_path: str):
     helper = Helper(client, msg)
