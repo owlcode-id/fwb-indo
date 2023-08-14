@@ -2,7 +2,7 @@ import os
 
 api_id = int(os.environ.get("API_ID", "24465982"))
 api_hash = os.environ.get("API_HASH", "2b3131b7d3f6a42bd4ae1ba3b58c11c4")
-bot_token = os.environ.get("BOT_TOKEN", "6630444051:AAER9RbdBgh2BwTXnR22quwc49LhBxMi2Cw")
+bot_token = os.environ.get("BOT_TOKEN", "6630444051:AAF5uKmL1nlcnKX9NUI7hDslNk_8cKMdv7E")
 # =========================================================== #
 
 db_url = os.environ.get("DB_URL", "mongodb+srv://fwb-indo:<password>@cluster0.1upxmf0.mongodb.net/?retryWrites=true&w=majority")
