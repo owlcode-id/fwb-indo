@@ -6,8 +6,7 @@ from plugins import Database, Helper
 
         
 
-async def send_with_pic_handler(client: Client, msg: types.Message, key: str, hastag: list):
-async def send_with_pic_handler(client: Client, msg: types.Message, key: str, hastag: list):
+async def send_with_pic_handler(client: Client, msg: types.Message, hastag: list):
     db = Database(msg.from_user.id)
     helper = Helper(client, msg)
     user = db.get_data_pelanggan()
@@ -24,34 +23,17 @@ async def send_with_pic_handler(client: Client, msg: types.Message, key: str, ha
             else:
                 return await msg.reply(f'🙅🏻‍♀️ post gagal terkirim. kamu hari ini telah mengirim ke menfess sebanyak {menfess}/{config.batas_kirim} kali.serta coin mu kurang untuk mengirim menfess diluar batas harian., kamu dapat mengirim menfess kembali pada hari esok.\n\n waktu reset jam 1 pagi. \n\n\n\n Info: Topup Coin Hanya ke @bobbyngeped', quote=True)
 
-        if key == hastag[0]:
-            picture = config.pic_girl
-        elif key == hastag[1]:
-            picture = config.pic_boy
-            
-        # Check for hashtags in the message text
-        if any(hashtag in msg.text.lower() for hashtag in hastag):
-            picture = None  # Set picture to None to exclude it
-
-        if user.status == 'talent':
-            picture = config.pic_talentgirl
-        # Continue with the rest of your code
-
         link = await get_link()
         caption = msg.text or msg.caption
-        entities = msg.entities or msg.caption_entities or []  # Initialize as an empty list
+        entities = msg.entities or msg.caption_entities
 
-        # Only send the picture if it's not None
-        if picture:
-            kirim = await client.send_photo(config.channel_1, picture, caption, caption_entities=entities)
-            await helper.send_to_channel_log(type="log_channel", link=link + str(kirim.id))
-        else:
-            kirim = await client.send_message(config.channel_1, caption, entities=entities)
-
+        kirim = await client.send_message(config.channel_1, caption, entities=entities)
+        await helper.send_to_channel_log(type="log_channel", link=link + str(kirim.id))
         await db.update_menfess(coin, menfess, all_menfess)
         await msg.reply(f"pesan telah berhasil terkirim. hari ini kamu telah mengirim menfess sebanyak {menfess + 1}/{config.batas_kirim} . kamu dapat mengirim menfess sebanyak {config.batas_kirim} kali dalam sehari\n\nwaktu reset setiap jam 1 pagi\n<a href='{link + str(kirim.id)}'>check pesan kamu</a>. \n\n\n\n Info: Topup Coin Hanya ke @bobbyngeped")
     else:
         await msg.reply('media yang didukung photo, video dan voice')
+
 
 
 async def send_menfess_handler(client: Client, msg: types.Message):
