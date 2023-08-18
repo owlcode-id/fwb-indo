@@ -2,17 +2,17 @@ import os
 
 api_id = int(os.environ.get("API_ID", "24465982"))
 api_hash = os.environ.get("API_HASH", "2b3131b7d3f6a42bd4ae1ba3b58c11c4")
-bot_token = os.environ.get("BOT_TOKEN", "6630444051:AAF5uKmL1nlcnKX9NUI7hDslNk_8cKMdv7E")
+bot_token = os.environ.get("BOT_TOKEN", "6344639589:AAEIxPkMYUUr2K6PloxytU-CR-oeMYLeErU")
 # =========================================================== #
 
 db_url = os.environ.get("DB_URL", "mongodb+srv://fwb-indo:<password>@cluster0.1upxmf0.mongodb.net/?retryWrites=true&w=majority")
 db_name = os.environ.get("DB_NAME", "menfess")
 # =========================================================== #
 
-channel_1 = int(os.environ.get("CHANNEL_1", "-1001802473399"))
-channel_2 = int(os.environ.get("CHANNEL_2", "-1001626036340"))
+channel_1 = int(os.environ.get("CHANNEL_1", "-1001825244023"))
+channel_2 = int(os.environ.get("CHANNEL_2", "-1001855788004"))
 channel_3 = int(os.environ.get("CHANNEL_3", "-1001825244023"))
-channel_log = int(os.environ.get("CHANNEL_LOG", "-1001973698894"))
+channel_log = int(os.environ.get("CHANNEL_LOG", "-1001930361818"))
 # =========================================================== #
 
 id_admin = int(os.environ.get("ID_ADMIN", "2033016485"))
